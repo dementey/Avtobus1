@@ -1,0 +1,20 @@
+﻿@model Avtobus1.Models.Url;
+
+@{
+    ViewBag.Title = "Add";
+}
+
+<form method="post" asp-controller="Url" asp-action="Add" asp-antiforgery="true">
+    <input type="hidden" name="ClickCount" value="" />
+    <div class="form-group">
+        <label asp-for="LongUrl" class="control-label"></label>
+        <div class="form-group-container">
+            <input type="text" asp-for="LongUrl" class="form-control" />
+            <span asp-validation-for="LongUrl" class="text-danger"></span>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <input type="submit" value="Add" class="btn btn-outline-secondary" />
+    </div>
+</form>
